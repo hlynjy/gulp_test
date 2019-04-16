@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <!--微信，qq，uc浏览器使用全屏模式，全屏模式里，浏览器是不会上下左右滑动出现背景的。-->
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <!--微信，qq，uc浏览器使用全屏模式，全屏模式里，浏览器是不会上下左右滑动出现背景的。-->
+    <title>地区</title>
+    <link rel="stylesheet" href="mui-master/dist/css/mui.css">
+    <link rel="stylesheet" href="css/details.css">
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav orderHead">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title orderTitle">地区</h1>
+    </header>
+    <div class="areaCountryBox">
+        <div class="areaCountryEvery">
+            <!--<div class="areaCountryEvery-in">
+                <p class="areaCountry">中国</p>
+                <p class="areaCountryGo">></p>
+            </div>-->
+        </div>
+    </div>
+    <div class="areaCityBox" style="display: none;">
+        <div class="areaCityEvery">
+            <!--<div class="areaCityEvery-in">
+                <p class="areaCity">北京</p>
+                <p class="areaCityGo">></p>
+            </div>-->
+        </div>
+    </div>
+    <div class="areaBox" style="display: none;">
+        <div class="areaEvery">
+            <!--<div class="areaEvery-in">
+                <p class="area">东城区</p>
+            </div>-->
+        </div>
+    </div>
+
+    <script src="js/mui.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jsencrypt.min.js"></script>
+    <script src="js/jQuery.md5.js"></script>
+    <script src="js/set-rootElem-rem.js"></script>
+    <script src="js/addressArea.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            if (isWeixin()) {
+                $(".orderHead").hide();
+                $(".areaCountryBox").css("margin-top","0");
+                $(".areaCityBox").css("margin-top","0");
+                $(".areaBox").css("margin-top","0");
+            } else {
+                $(".orderHead").show();
+                $(".areaCountryBox").css("margin-top","3.129rem");
+                $(".areaCityBox").css("margin-top","3.129rem");
+                $(".areaBox").css("margin-top","3.129rem");
+            }
+        });
+        //判断是否在微信中打开
+        function isWeixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

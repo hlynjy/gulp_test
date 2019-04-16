@@ -1,0 +1,1423 @@
+*{
+    font-family: SourceHanSansCN-Regular;
+}
+p{
+    margin-bottom: 0;
+}
+a{
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-select: none;
+}
+@font-face {
+    font-family: "SourceHanSansCN-Regular";
+    src: url("SourceHanSansCN-Regular.woff2") format("woff2"),
+    url("SourceHanSansCN-Regular.woff") format("woff"),
+    url("SourceHanSansCN-Regular.ttf") format("truetype"),
+    url("SourceHanSansCN-Regular.eot") format("embedded-opentype"),
+    url("SourceHanSansCN-Regular.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SourceHanSansCN-Medium";
+    src: url("SourceHanSansCN-Medium.woff2") format("woff2"),
+    url("SourceHanSansCN-Medium.woff") format("woff"),
+    url("SourceHanSansCN-Medium.ttf") format("truetype"),
+    url("SourceHanSansCN-Medium.eot") format("embedded-opentype"),
+    url("SourceHanSansCN-Medium.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+#details-header{
+    /*padding-left: 10px;
+    padding-right: 10px;
+    background: rgba(0,0,0,0)!important;
+    box-shadow: none!important;*/
+    box-shadow: none;
+    background:rgba(0,0,0,0);
+    transition: background 1s;
+    /* Firefox 4 */
+    -moz-transition:background 1s;
+    /* Safari and Chrome */
+    -webkit-transition:background 1s;
+    /* Opera */
+    -o-transition:background 1s;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    height: 3.129rem!important;
+    padding-left: 0.711rem!important;
+    padding-right: 0.711rem!important;
+}
+#details-header.active{
+    background: #fff;
+    transition: background 1s;
+    /* Firefox 4 */
+    -moz-transition:background 1s;
+    /* Safari and Chrome */
+    -webkit-transition:background 1s;
+    /* Opera */
+    -o-transition:background 1s;
+}
+.backBtnBox{
+    width: 1.778rem!important;
+    height: 1.778rem!important;
+    background: rgba(0,0,0,0.5);
+    border-radius: 3.556rem!important;
+    float: left;
+    position: relative;
+    margin-top: 0.711rem!important;
+    margin-bottom: 0.711rem!important;
+    transition: background 1s;
+    /* Firefox 4 */
+    -moz-transition:background 1s;
+    /* Safari and Chrome */
+    -webkit-transition:background 1s;
+    /* Opera */
+    -o-transition:background 1s;
+    display: none;
+}
+.backBtnBox.active{
+    background: rgba(0,0,0,0);
+    transition: background 1s;
+    /* Firefox 4 */
+    -moz-transition:background 1s;
+    /* Safari and Chrome */
+    -webkit-transition:background 1s;
+    /* Opera */
+    -o-transition:background 1s;
+}
+.backBtn{
+    margin-right: 0!important;
+    margin-left: 0!important;
+    padding-right: 0!important;
+    padding-left: 0!important;
+    padding-bottom: 0!important;
+    padding-top: 0!important;
+    color: #fff;
+    transition: color 1s;
+    /* Firefox 4 */
+    -moz-transition:color 1s;
+    /* Safari and Chrome */
+    -webkit-transition:color 1s;
+    /* Opera */
+    -o-transition:color 1s;
+    font-size: 1.707rem!important;
+    position: relative;
+    z-index: 20;
+}
+.backBtn.active{
+    color: #999;
+    transition: color 1s;
+    /* Firefox 4 */
+    -moz-transition:color 1s;
+    /* Safari and Chrome */
+    -webkit-transition:color 1s;
+    /* Opera */
+    -o-transition:color 1s;
+}
+.details-title{
+    color: rgba(0,0,0,0)!important;
+    transition: color 1s;
+    /* Firefox 4 */
+    -moz-transition:color 1s;
+    /* Safari and Chrome */
+    -webkit-transition:color 1s;
+    /* Opera */
+    -o-transition:color 1s;
+    position: absolute;
+    right: 2.845rem!important;
+    left: 2.845rem!important;
+    font-size: 1.209rem!important;
+    line-height: 3.129rem!important;
+}
+.details-title.active{
+    color: #000!important;
+    transition: color 1s;
+    /* Firefox 4 */
+    -moz-transition:color 1s;
+    /* Safari and Chrome */
+    -webkit-transition:color 1s;
+    /* Opera */
+    -o-transition:color 1s;
+}
+.swiper-wrapper,.swiper-slide{
+    width: 100%;
+}
+.swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.details-scroll{
+    width: 100%;
+    height: auto;
+    background: #efeff4;
+    margin-bottom: 3.129rem;
+}
+.goodInfoBox{
+    width: 100%;
+    background: #fff;
+    padding-top: 1.067rem!important;
+    padding-bottom: 0.711rem!important;
+}
+.goodInfoBox-in{
+    width: 94%;
+    margin-left: 3%;
+}
+.goodPrice{
+    color: #ee554d;
+    font-size: 0.853rem!important;
+    font-family: SourceHanSansCN-Medium;
+}
+.goodPrice span{
+    font-size: 1.422rem!important;
+    font-family: SourceHanSansCN-Medium;
+}
+.goodDescribe{
+    font-size: 1.138rem!important;
+    color: #333333;
+    line-height: 1.067rem!important;
+    margin-top: 0.356rem!important;
+    font-family: SourceHanSansCN-Regular;
+}
+.goodDetailed{
+    width: 100%;
+    margin-top: 0.711rem!important;
+    overflow: hidden;
+}
+.goodDetailed p{
+    width: 33%;
+    float: left;
+    font-size: 0.853rem!important;
+    text-align: center;
+    color: #999999;
+    font-family: SourceHanSansCN-Regular;
+}
+.goodPostage{
+    text-align: left!important;
+}
+.goodAddress{
+    text-align: right!important;
+}
+.goodAttributeBox{
+    width: 100%;
+    height: 2.845rem!important;
+    background: #fff;
+    margin-top: 0.711rem!important;
+    overflow: hidden;
+}
+.goodAttributeBox-in{
+    width: 94%;
+    margin-left: 3%;
+    height: 2.845rem!important;
+    line-height: 2.845rem!important;
+    overflow: hidden;
+}
+.goodChooseLeft{
+    font-size: 0.996rem!important;
+    color: #999;
+    float: left;
+    line-height: 2.845rem;
+    width: 2rem;
+    font-family: SourceHanSansCN-Regular;
+}
+.goodChooseCenterBig{
+    float: right;
+    overflow: hidden;
+    width: calc(100% - 2.6rem);
+    height: 2.845rem;
+}
+.goodChooseCenter{
+    color: #333333;
+    font-size: 0.996rem!important;
+    float: left;
+    line-height: 2.845rem;
+    font-family: SourceHanSansCN-Regular;
+}
+.goodChooseRight{
+    float: right;
+    width: 0.427rem;
+    height: 0.782rem;
+}
+.goodChooseRight img{
+    width: 100%;
+    height: 100%;
+}
+.goodChooseSure{
+    line-height: 2.845rem;
+    font-size: 0.996rem;
+    color: #000;
+    float: left;
+    margin-left: 0.853rem!important;
+}
+.goodEvaluateBox{
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    margin-top: 0.711rem!important;
+}
+.goodEvaluateBox-in{
+    width: 94%;
+    margin-left: 3%;
+    margin-top: 0.996rem;
+}
+.goodEvaluateTitleBox{
+    width: 100%;
+    height: 2.489rem!important;
+    line-height: 2.489rem!important;
+}
+.goodEvaluateIcon{
+    float: left;
+    background: #ee554d;
+    width: 0.142rem;
+    height: 0.996rem;
+    margin-top: 0.747rem;
+}
+.goodEvaluateTitle{
+    float: left;
+    font-size: 0.996rem!important;
+    color: #333333;
+    margin-left: 0.853rem!important;
+    font-family: SourceHanSansCN-Regular;
+}
+.goodEvaluateAll{
+    float: right;
+    font-size: 0.853rem!important;
+    color: #999;
+    display: none;
+}
+.goodEvaluateAllTil{
+    font-size: 0.853rem;
+    float: left;
+    margin-right: 0.4rem;
+    color: #999999;
+    font-family: SourceHanSansCN-Regular;
+}
+.goodEvaluateAllGo{
+    width: 0.427rem;
+    height: 0.782rem;
+    vertical-align: middle;
+    display: block;
+    float: right;
+    margin-top: 0.1rem;
+}
+.goodEvaluateAllGo img{
+    width: 100%;
+    height: 100%;
+}
+.goodEvaluateContentBox{
+    width: 100%;
+    overflow: hidden;
+}
+.goodEvaluateNone{
+    font-size: 0.853rem;
+    color: #999;
+    line-height: 2.489rem;
+    display: none;
+}
+.goodEvaluateEvery{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+.goodEvaluateContent{
+    width: calc(100% - 2.634rem);
+    overflow: hidden;
+    border-bottom: 0.002rem solid #e8e8e8;
+    float: right;
+    margin-left: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.goodEvaluateContentTitle{
+    font-size: 0.853rem;
+    color: #999;
+    font-family: SourceHanSansCN-Regular;
+}
+.goodEvaluateContentDetailed{
+    font-size: 0.853rem;
+    color: #333333;
+    margin-top: 0.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-family: SourceHanSansCN-Regular;
+}
+.goodDetailsBox{
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    margin-top: 0.711rem;
+}
+.goodDetailsTitle{
+    width: 100%;
+    height: 3.556rem;
+    text-align: center;
+    font-size: 0.996rem;
+    line-height: 3.556rem;
+    color: #999;
+    font-family: SourceHanSansCN-Regular;
+}
+.goodDetailsTitle span{
+    width: 0.356rem;
+}
+.goodDetailsImg{
+    width: 100%;
+    overflow: hidden;
+}
+.goodDetailsImg img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.goodFootBox{
+    width: 100%;
+    height: 3.485rem;
+    background: #ffffff;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0rem -0.142rem 0.284rem 0rem rgba(0, 0, 0, 0.06);
+}
+.goodFootBox a{
+    display: block;
+    width: 94%;
+    margin-left: 3%;
+    height: 2.489rem;
+    line-height: 2.589rem;
+    background: #ee554d;
+    color: #fff;
+    text-align: center;
+    margin-top: 0.498rem;
+    border-radius: 3.556rem;
+    font-size: 0.853rem;
+}
+.maskBox{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    display: none;
+}
+.maskWrap{
+    width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 0.569rem;
+    border-top-right-radius: 0.569rem;
+    background: #fff;
+    height: 32.006rem;
+    position: fixed;
+    bottom: 0;
+}
+.maskWrap-in{
+    width: 94%;
+    margin-left: 3%;
+    overflow: hidden;
+}
+.maskTopBox{
+    width: 100%;
+    height: 5.690rem;
+    margin-top: 0.853rem;
+    position: relative;
+    overflow: hidden;
+}
+.maskTopImgBoxBig{
+    width: 5.690rem;
+    height: 5.690rem;
+    float: left;
+    overflow: hidden;
+}
+.maskTopImgBox{
+    width: 5.690rem;
+    height: 5.690rem;
+    overflow: hidden;
+}
+.maskTopImgBox img{
+    width: 100%;
+    height: 100%;
+}
+.maskTopInfoBox{
+    width: calc(100% - 6.190rem);
+    padding-top: 1.253rem;
+    /*padding-top: 1.849rem;*/
+    float: left;
+    margin-left: 0.5rem;
+    overflow: hidden;
+}
+.maskTopPrice{
+    color: #ee554d;
+    font-size: 0.853rem;
+    font-family: SourceHanSansCN-Medium;
+}
+.maskTopPrice span{
+    font-size: 1.109rem;
+    font-family: SourceHanSansCN-Medium;
+}
+.maskTopStock{
+    margin-left: 0.853rem;
+    color: #999;
+    font-size: 0.853rem;
+    font-family: SourceHanSansCN-Regular;
+}
+.maskTopStock span{
+    font-family: SourceHanSansCN-Regular;
+}
+.maskTopAttribute{
+    font-size: 0.853rem;
+    margin-top: 0.427rem;
+    color: #333333;
+    font-family: SourceHanSansCN-Regular;
+    line-height: 1.2rem;
+}
+.maskTopClose{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0.940rem;
+    height: 0.940rem;
+    /*font-size: 1.280rem;*/
+}
+.maskScrollBox{
+    width: 100%;
+    height: 21.196rem;
+    overflow-y: scroll;
+}
+.maskScrollType{
+    width: 100%;
+    overflow: hidden;
+    /*border-bottom: 0.071rem solid #e8e8e8;
+    margin-top: 1.008rem;*/
+    margin-top: 0.5rem;
+}
+.maskScrollTitle{
+    font-size: 0.853rem;
+    color: #999;
+    font-family: SourceHanSansCN-Regular;
+}
+.maskScrollDetailed{
+    display: block;
+    padding-top: 0.427rem;
+    padding-bottom: 0.427rem;
+    padding-left: 0.182rem;
+    padding-right: 0.182rem;
+    text-align: left;
+    font-size: 0.996rem;
+    border-radius: 0.142rem;
+    background: #f4f4f4;
+    float: left;
+    color: #333333;
+    margin-bottom: 0.853rem;
+    margin-right: 0.853rem;
+    font-family: SourceHanSansCN-Regular;
+}
+.maskScrollDetailed.active{
+    background: rgba(238,85,77,0.1);
+    color: #ee554d;
+}
+.maskFootBox{
+    width: 100%;
+    height: 3.129rem;
+    position: fixed;
+    bottom: 0;
+}
+.maskFootBox a{
+    display: block;
+    width: 94%;
+    height: 2.489rem;
+    line-height: 2.589rem;
+    background: #ee554d;
+    color: #fff;
+    text-align: center;
+    margin-top: 0.197rem;
+    border-radius: 3.556rem;
+    font-size: 0.853rem;
+}
+.maskScrollMountBox{
+    width: 100%;
+    height: 3.129rem;
+}
+.maskScrollMount{
+    font-size: 0.853rem;
+    line-height: 3.129rem;
+    float: left;
+    color: #999;
+    font-family: SourceHanSansCN-Regular;
+}
+.maskScrollBtn{
+    height: 1.468rem;
+    float: right;
+    margin-top: 0.830rem;
+}
+.maskScrollReduce,.maskScrollMore{
+    display: block;
+    float: left;
+    width: 1.464rem;
+    height: 1.464rem;
+    line-height: 1.464rem;
+    border: 0.002rem solid #ccc;
+    color: #666;
+    text-align: center;
+}
+.maskScrollInp{
+    float: left;
+    width: 2.138rem!important;
+    height: 1.464rem!important;
+    line-height: 1.464rem!important;
+    border: none!important;
+    border-top: 0.002rem solid #ccc!important;
+    border-bottom: 0.002rem solid #ccc!important;
+    margin-bottom: 0!important;
+    text-align: center;
+    padding: 0!important;
+    border-radius: 0!important;
+    font-size: 0.853rem;
+    color: #000;
+    font-family: SourceHanSansCN-Regular;
+}
+
+/* 提交订单 */
+.orderHead,.evaluaterHead{
+    box-shadow: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    height: 3.129rem!important;
+    padding-left: 0.711rem!important;
+    padding-right: 0.711rem!important;
+    border-bottom: 0.002rem solid #ccc;
+}
+.orderHead a,.evaluaterHead a{
+    color: #999!important;
+    margin-right: 0!important;
+    margin-left: 0!important;
+    padding-right: 0!important;
+    padding-left: 0!important;
+    padding-bottom: 0!important;
+    padding-top: 0!important;
+    font-size: 1.707rem!important;
+    position: relative;
+    z-index: 20;
+    margin-top: 0.711rem!important;
+}
+.orderTitle{
+    position: absolute;
+    right: 2.845rem!important;
+    left: 2.845rem!important;
+    font-size: 1.209rem!important;
+    line-height: 3.129rem!important;
+}
+.orderAddressBox{
+    width: 100%;
+    /*height: 6.290rem;*/
+    height: 7.8rem;
+    background: #fff;
+    margin-top: 3.129rem;
+    overflow: hidden;
+}
+.orderAddressBox-in{
+    width: 94%;
+    margin-left: 3%;
+    /*margin-top: 0.356rem;
+    margin-bottom: 0.356rem;*/
+    overflow: hidden;
+}
+.orderAddNoneBox{
+    width: 5.690rem;
+    height: 3.556rem;
+    margin: 0 auto;
+    margin-top: 0.983rem;
+    text-align: center;
+    overflow: hidden;
+}
+.orderAddPlus{
+    font-size: 1.778rem;
+    color: #999;
+}
+.orderAddress{
+    font-size: 0.853rem;
+    color: #999;
+    /*margin-top: 0.8rem;*/
+}
+.orderAddContentBoxBig{
+    width: 100%;
+    height: 7.8rem;
+    background: url(../images/submit_addImg.png) repeat-x left bottom;
+    overflow: hidden;
+    background-size: 1.209rem 0.356rem;
+}
+.orderAddContentBox{
+    width: 100%;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+.orderAddIcon{
+    float: left;
+    width: 1.422rem;
+    height: 1.707rem;
+    margin-top: 2.434rem;
+}
+.orderAddIcon img{
+    width: 100%;
+    height: 100%;
+}
+.orderAddContent{
+    width: calc(100% - 3.8rem);
+    /*height: 6.290rem;*/
+    float: left;
+    margin-left: 1rem;
+    margin-top: 1.1rem;
+}
+.orderAddTop{
+    width: 100%;
+    overflow: hidden;
+}
+.orderAddConsignee{
+    float: left;
+    width: 50%;
+    font-size: 0.996rem;
+    color: #333333;
+    font-family: SourceHanSansCN-Regular;
+}
+.orderAddTel{
+    float: right;
+    width: 50%;
+    font-size: 0.996rem;
+    color: #333333;
+    text-align: center;
+    font-family: SourceHanSansCN-Regular;
+}
+.orderAddDetailed{
+    font-size: 0.996rem;
+    color: #666666;
+    margin-top: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-family: SourceHanSansCN-Regular;
+}
+.orderAddGo{
+    float: right;
+    line-height: 6.290rem;
+    width: 0.427rem;
+    height: 0.818rem;
+}
+.orderAddGo img{
+    width: 100%;
+    height: 100%;
+}
+/*.orderAddTop{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0.284rem;
+}
+.orderAddConsignee{
+    float: left;
+    width: 50%;
+}
+.orderAddConsignee p{
+    color: #000;
+    font-size: 1.067rem;
+    float: left;
+    width: 4.267rem;
+}
+.orderAddName,.orderAddNum,.orderAddDetailed{
+    float: left;
+    width: calc(100% - 4.267rem) !important;
+    border: none!important;
+    border-bottom: 0.002rem solid #ccc!important;
+    height: 1.422rem!important;
+    line-height: 1.422rem!important;
+    margin-bottom: 0!important;
+    padding: 0!important;
+    border-radius: 0!important;
+    font-size: 1.067rem;
+    color: #000;
+}
+.orderAddTel{
+    float: right;
+    width: 45%;
+}
+.orderAddTel p{
+    color: #000;
+    font-size: 1.067rem;
+    float: left;
+    width: 4.267rem;
+}
+.orderAddBottom{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0.427rem;
+}
+.orderAddBottom p{
+    color: #000;
+    font-size: 1.067rem;
+    float: left;
+    width: 3.201rem;
+}
+.orderAddDetailed{
+    height: 2.844rem!important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}*/
+.orderGoodBox{
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    margin-top: 0.711rem;
+}
+.orderGoodBig-in{
+    width: 100%;
+    height: 14.225rem;
+    border-bottom: 0.002rem solid #e8e8e8;
+    overflow: hidden;
+}
+.orderGoodSmall-in{
+    width: 100%;
+    height: 8.890rem;
+    border-bottom: 0.002rem solid #e8e8e8;
+    padding-top: 1.6rem;
+    overflow: hidden;
+}
+.orderGoodSmallBox{
+    width: 94%;
+    margin-left: 3%;
+    height: 5.690rem;
+    overflow: hidden;
+}
+.orderGoodImgBox{
+    width: 5.690rem;
+    height: 5.690rem;
+    float: left;
+    overflow: hidden;
+}
+.orderGoodImgBox img{
+    width: 100%;
+    height: 100%;
+}
+.orderGoodInfoBox{
+    width: calc(100% - 6.543rem);
+    height: 5.690rem;
+    float: right;
+    overflow: hidden;
+    position: relative;
+}
+.orderGoodTitle{
+    font-size: 0.996rem;
+    color: #333333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 2.716rem;
+    line-height: 1.2rem;
+    font-family: SourceHanSansCN-Medium;
+}
+.orderGoodKind{
+    color: #999;
+    font-size: 0.853rem;
+    font-family: SourceHanSansCN-Regular;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-top: 0.356rem;
+}
+.orderGoodPriceBox{
+    width: 100%;
+    overflow: hidden;
+    /*margin-top: 0.250rem;
+    margin-top: -0.250rem;*/
+    position: absolute;
+    bottom: 0;
+}
+.orderGoodPrice{
+    float: left;
+    color: #eb5b3f;
+    font-size: 0.853rem;
+}
+.orderGoodPrice span{
+    font-size: 1.067rem;
+}
+.orderGoodMount{
+    float: right;
+    color: #333333;
+    font-size: 0.853rem;
+    font-family: SourceHanSansCN-Regular;
+}
+.orderGoodSideBox{
+    width: 94%;
+    margin-left: 3%;
+    height: 5.335rem;
+    overflow: hidden;
+}
+.orderGoodDelBox{
+    width: 100%;
+    height: 2.664rem;
+    border-bottom: 0.002rem solid #e8e8e8;
+    overflow: hidden;
+}
+.orderGoodDel,.orderGoodDelVal{
+    font-size: 0.853rem;
+    color: #333333;
+    line-height: 2.664rem;
+    float: left;
+    font-family: SourceHanSansCN-Regular;
+}
+.orderGoodDelVal{
+    float: right;
+}
+.orderGoodMesBox{
+    width: 100%;
+    height: 2.667rem;
+    overflow: hidden;
+}
+.orderGoodMes{
+    width: 4.867rem;
+    float: left;
+    line-height: 2.667rem;
+    color: #333333;
+    font-size: 0.853rem;
+    font-family: SourceHanSansCN-Regular;
+}
+.orderGoodMesVal{
+    /*float: right;
+    width: calc(100% - 4.867rem) !important;*/
+    border: none!important;
+    height: 2.660rem!important;
+    font-size: 0.853rem!important;
+    color: #333333!important;
+    margin-bottom: 0!important;
+    padding: 0!important;
+    border-radius: 0!important;
+    padding-top: 0.62rem!important;
+    font-family: SourceHanSansCN-Regular!important;
+}
+.orderGoodMesVal::-webkit-input-placeholder,.orderGoodMesVal::-moz-placeholder,.orderGoodMesVal::-ms-input-placeholder{
+    color: #999;
+}
+.orderGoodTotalBox{
+    width: 100%;
+    height: 2.845rem;
+    overflow: hidden;
+}
+.orderGoodTotalBox-in{
+    width: 94%;
+    margin-left: 3%;
+    height: 2.845rem;
+    overflow: hidden;
+}
+.orderGoodTotalBox-in p{
+    text-align: right;
+    line-height: 2.845rem;
+}
+.orderGoodCount{
+    color: #333333;
+    font-size: 0.853rem;
+    font-family: SourceHanSansCN-Regular;
+}
+.orderGoodTotal,.orderGoodAllTotal{
+    margin-left: 0.356rem;
+    color: #333333;
+    font-size: 0.853rem;
+    font-family: SourceHanSansCN-Regular;
+}
+.orderGoodTotal span,.orderGoodAllTotal span{
+    color: #ee554d;
+    font-size: 0.853rem;
+    font-family: SourceHanSansCN-Regular;
+}
+.orderGoodTotal span.orderGoodMoney,.orderGoodAllTotal span.orderGoodMoney{
+    font-size: 1.067rem;
+}
+.orderBox{
+    width: 100%;
+    /*height: 8.535rem;*/
+    background: #fff;
+    overflow: hidden;
+    margin-top: 0.711rem;
+}
+.orderBox-in{
+    width: 94%;
+    margin-left: 3%;
+    /*height: 8.535rem;*/
+    overflow: hidden;
+}
+.orderPayBox{
+    width: 100%;
+    height: 2.843rem;
+    border-bottom: 0.002rem solid #e8e8e8;
+    line-height: 2.843rem;
+    color: #333333;
+    font-size: 0.853rem;
+    font-family: SourceHanSansCN-Regular;
+}
+.orderWeixinBox,.orderzhifubaoBox{
+    width: 100%;
+    height: 2.845rem;
+    overflow: hidden;
+}
+.weixin_pay{
+    margin-top: 0.688rem;
+    float: left;
+    width: 1.707rem;
+    height: 1.494rem;
+}
+.weixin_pay img{
+    width: 100%;
+    height: 100%;
+}
+.orderWeixinBox p,.orderzhifubaoBox p{
+    font-size: 0.853rem;
+    color: #333333;
+    float: left;
+    line-height: 2.845rem;
+    font-family: SourceHanSansCN-Regular;
+    margin-left: 0.6rem;
+}
+.weixinChoose{
+    width: 1.067rem;
+    height: 1.067rem;
+    float: right;
+    margin-top: 0.889rem;
+}
+.weixinChooseSure,.zhifubaoChooseSure{
+    display: block;
+    width: 1.007rem;
+    height: 1.007rem;
+    background: url(../images/submit_no.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.weixinChooseSure.active,.zhifubaoChooseSure.active{
+    background: url(../images/submit_yes.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.zhifubao_pay{
+    margin-top: 0.588rem;
+    float: left;
+    width: 1.636rem;
+    height: 1.636rem;
+}
+.zhifubao_pay img{
+    width: 100%;
+    height: 100%;
+}
+.orderFootBox{
+    width: 100%;
+    height: 3.129rem;
+    background: #fff;
+    border-top: 0.002rem solid #ccc;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+}
+.orderFootBox p{
+    float: right;
+    height: 3.129rem;
+    line-height: 3.129rem;
+}
+.orderGoodAllTotal{
+    float: left;
+}
+.orderFootPay{
+    margin-left: 0.956rem;
+    display: block;
+    width: 6.4rem;
+    height: 3.129rem;
+    background: #ee554d;
+    color: #fff;
+    font-size: 0.996rem;
+    text-align: center;
+    line-height: 3.129rem;
+    float: right;
+}
+
+/* 全部评价 */
+.evaluaterHead{
+    border-bottom: none;
+}
+.evaluateContent{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 3.129rem;
+}
+.evaluateEveryBox{
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    padding-top: 0.5rem;
+}
+.evaluateEveryBox-in{
+    width: 94%;
+    margin-left: 3%;
+    overflow: hidden;
+    border-bottom: 0.002rem solid #e8e8e8;
+    margin-bottom: 0.5rem;
+}
+.evaluateEveryTop{
+    width: 100%;
+    height: 2.134rem;
+    overflow: hidden;
+}
+.evaluateEveryImgBox{
+    width: 2.134rem;
+    height: 2.134rem;
+    float: left;
+}
+.evaluateEveryImgBox img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.evaluateEveryName,.evaluateEveryDate{
+    line-height: 2.134rem;
+    float: left;
+    margin-left: 0.711rem;
+    font-size: 0.853rem;
+    color: #333333;
+    font-family: SourceHanSansCN-Regular;
+}
+.evaluateEveryDate{
+    float: right;
+    color: #999;
+}
+.evaluateEvery{
+    font-size: 0.996rem;
+    color: #333333;
+    line-height: 3rem;
+    font-family: SourceHanSansCN-Regular;
+}
+.evaluateEveryKind{
+    font-size: 0.853rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+    font-family: SourceHanSansCN-Regular;
+}
+
+/* 地址管理 */
+.adminAddBox{
+    width: 100%;
+    margin-top: 3.129rem;
+    overflow: hidden;
+}
+.adminAddNone{
+    font-size: 0.853rem;
+    color: #999;
+    text-align: center;
+    line-height: 10rem;
+}
+.adminAddEvery{
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 0.002rem solid #e8e8e8;
+}
+.adminAddEvery-in{
+    width: 94%;
+    margin-left: 3%;
+    overflow: hidden;
+}
+.adminAddNameBox{
+    width: 100%;
+    height: 2.134rem;
+    overflow: hidden;
+}
+.adminAddDefaultIcon{
+    float: left;
+    width: 1.280rem;
+    height: 1.280rem;
+    background: url(../images/admin_false.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    margin-top: 0.427rem;
+    visibility: hidden;
+}
+.adminAddDefaultIcon.active{
+    background: url(../images/admin_true.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    visibility: visible;
+}
+.adminAddBuyer{
+    float: left;
+    line-height: 2.134rem;
+    font-size: 0.996rem;
+    color: #333333;
+    margin-left: 0.356rem;
+    font-family: SourceHanSansCN-Regular;
+}
+.adminAddEditBox{
+    float: right;
+    width: 4.267rem;
+    height: 2.134rem;
+}
+.adminAddEdit,.adminAddRemove{
+    float: left;
+    width: 1.778rem;
+    height: 1.778rem;
+    margin-top: 0.178rem;
+}
+.adminAddEdit img,.adminAddRemove img{
+    width: 100%;
+    height: 100%;
+}
+.adminAddRemove{
+    float: right;
+}
+.adminAddTel,.adminAddress{
+    line-height: 2.134rem;
+    font-size: 0.996rem;
+    color: #333333;
+    margin-left: 1.4rem;
+    font-family: SourceHanSansCN-Regular;
+}
+.adminAddBtn{
+    width: 94%!important;
+    height: 2.845rem!important;
+    line-height: 2.845rem!important;
+    margin-left: 3%!important;
+    background: #e8e8e8!important;
+    color: #333333!important;
+    text-align: center!important;
+    font-size: 0.853rem!important;
+    padding: 0!important;
+    transition: none!important;
+    vertical-align: middle!important;
+    border: 0.002rem solid #ccc!important;
+    margin-top: 1rem!important;
+    border-radius: 0.5rem!important;
+    cursor: pointer!important;
+}
+.adminMaskBox{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    display: none;
+}
+.adminMaskContent{
+    width: 80%;
+    background: #fff;
+    height: 9rem;
+    border-radius: 0.3rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -40%;
+    margin-top: -4.5rem;
+    overflow: hidden;
+}
+.adminMaskTitle{
+    height: 4rem;
+    line-height: 4rem;
+    color: #333333;
+    font-size: 0.996rem;
+    text-align: center;
+    font-family: SourceHanSansCN-Regular;
+}
+.adminMaskBtnBox{
+    width: 90%;
+    margin-left: 5%;
+    /*height: 2.134rem;*/
+    height: 2.5rem;
+    margin-top: 0.8rem;
+}
+.adminCancelBtn,.adminSureBtn{
+    width: 45%;
+    height: 2.134rem;
+    background: #ee554d;
+    color: #fff;
+    font-size: 0.853rem;
+    border-radius: 10rem;
+    line-height: 2.134rem;
+    text-align: center;
+    float: left;
+}
+.adminSureBtn{
+    background: #fff;
+    float: right;
+    color: red;
+    /*height: 2.062rem;*/
+    height: 2.134rem;
+    border: 0.06rem solid #ee554d;
+}
+
+/* 编辑地址 */
+.editAddBox{
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    margin-top: 3.129rem;
+}
+.editAddBuyerBox{
+    width: 100%;
+    height: 2.845rem;
+    border-bottom: 0.002rem solid #e8e8e8;
+}
+.editAddBuyerBox-in{
+    width: 94%;
+    margin-left: 3%;
+    height: 2.845rem;
+}
+.editAddBuyerName{
+    width: 4.267rem;
+    float: left;
+    line-height: 2.845rem;
+    font-size: 0.996rem;
+    color: #333333;
+    font-family: SourceHanSansCN-Regular;
+}
+.editAddNameBox{
+    width: calc(100% - 5.267rem);
+    float: right;
+    height: 2.845rem;
+}
+.editAddNameBox input{
+    width: 100%;
+    height: 2.705rem;
+    line-height: 2.705rem;
+    border: none!important;
+    font-size: 0.996rem!important;
+    color: #333333 !important;
+    margin-bottom: 0!important;
+    padding: 0!important;
+    border-radius: 0!important;
+    font-family: SourceHanSansCN-Regular;
+}
+.editAddChooseBox{
+    float: right;
+    width: 4rem;
+    height: 2.845rem;
+}
+.editAddAreaBox{
+    font-size: 0.996rem;
+    color: #999;
+    line-height: 2.845rem;
+    float: left;
+}
+.editAddImg{
+    width: 0.427rem;
+    height: 0.782rem;
+    float: right;
+    margin-top: 0.66rem;
+}
+.editAddImg img{
+    width: 100%;
+    height: 100%;
+}
+.editAddArea{
+    font-size: 0.996rem;
+    color: #333333;
+    line-height: 2.489rem;
+    display: none;
+    font-family: SourceHanSansCN-Regular;
+}
+.editButtonBox{
+    width: 50%;
+    margin-left: 25%;
+    height: 3rem;
+    overflow: hidden;
+}
+.editAddDefaultBox{
+    width: 6.712rem;
+    height: 3rem;
+    overflow: hidden;
+    float: left;
+}
+.editAddDefaultIcon{
+    float: left;
+    width: 1.280rem;
+    height: 1.280rem;
+    background: url(../images/admin_false.png) no-repeat center center;
+    background-size: 100% 100%;
+    margin-top: 0.86rem;
+}
+.editAddDefaultIcon.active{
+    background: url(../images/admin_true.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.editAddDefault{
+    float: right;
+    font-size: 0.853rem;
+    color: #333333;
+    line-height: 3rem;
+    text-align: center;
+    font-family: SourceHanSansCN-Regular;
+}
+.editPreBtn{
+    width: calc(100% - 8.412rem)!important;
+    height: 3rem!important;
+    line-height: 3rem!important;
+    background: #efeff4!important;
+    color: #333333!important;
+    text-align: center!important;
+    font-size: 0.853rem!important;
+    padding: 0!important;
+    transition: none!important;
+    vertical-align: middle!important;
+    border: none!important;
+    border-radius: 0!important;
+    float: right;
+    cursor: pointer!important;
+    font-family: SourceHanSansCN-Regular;
+}
+
+/* 地区 */
+.areaCountryBox,.areaCityBox,.areaBox{
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    margin-top: 3.129rem;
+}
+.areaCountryEvery,.areaCityEvery,.areaEvery{
+    width: 100%;
+    overflow: hidden;
+}
+.areaCountryEvery-in,.areaCityEvery-in,.areaEvery-in{
+    width: 94%;
+    margin-left: 3%;
+    border-bottom: 0.002rem solid #e8e8e8;
+    height: 2.845rem;
+    overflow: hidden;
+}
+.areaCountry,.areaCity,.area{
+    float: left;
+    font-size: 0.996rem;
+    color: #333333;
+    line-height: 2.845rem;
+    font-family: SourceHanSansCN-Regular;
+}
+.areaCountryGo,.areaCityGo{
+    float: right;
+    line-height: 2.845rem;
+    width: 0.427rem;
+    height: 0.818rem;
+}
+.areaCountryGo img,.areaCityGo img{
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-select: none;
+}
+input{
+    border: none!important;
+    background: none!important;
+    outline: none!important;
+    line-height: 0!important;
+    width: 0!important;
+    height: 0!important;
+    margin-bottom: 0!important;
+    padding: 0!important;
+    border-radius: 0!important;
+}
+button{
+    position: static!important;
+    padding: 0!important;
+    transition: none!important;
+    border: none!important;
+    border-right: 0!important;
+    border-top-left-radius: 0!important;
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+    background-color: none!important;
+    background-clip: inherit!important;
+}
+button:focus{
+    background: none;
+}
+.loginWrap{
+    width: 100%;
+    height: 100%;
+}
+.loginImgBox{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+}
+.loginImgBox img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.loginContentBox{
+    width: 23.826rem;
+    height: 12.411rem;
+    background: #fff;
+    border-radius: 0.356rem;
+    overflow: hidden;
+    margin: 0 auto;
+    border:0.002rem solid #BFBFBF;
+    box-shadow: 0rem 0.071rem 0.356rem 0.156rem rgba(102, 102, 102, 0.2);
+    margin-top: -2.5rem;
+}
+.loginTopBox{
+    width: 100%;
+    height: 3.201rem;
+    overflow: hidden;
+}
+.loginTopBox>div{
+    width: 50%;
+    text-align: center;
+    height: 3.197rem;
+    float: left;
+}
+.loginPhone,.loginAccount{
+    color: #333333;
+    font-size: 0.996rem;
+    height: 2.5rem;
+    line-height: 3.197rem;
+    display: block;
+    width: 6rem;
+    margin: 0 auto;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: normal;
+    font-stretch: normal;
+    border-bottom: 0.142rem solid #fff;
+}
+.loginTopBox>div.active>div{
+    color: #ee554d;
+    border-bottom: 0.142rem solid red;
+}
+.loginTelInfoBox,.loginAccountBox{
+    width: 21.337rem;
+    height: 5.974rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+.loginPhoneBox,.loginCodeBox,.loginPasswordBox{
+    width: 100%;
+    height: 2.987rem;
+    overflow: hidden;
+}
+.loginPhoneBox img,.loginCodeBox img,.loginPasswordBox img{
+    width: 1.565rem;
+    height: 1.565rem;
+    float: left;
+    margin-top: 0.711rem;
+}
+.loginTelInput,.loginCodeInput,.loginPasswordInput{
+    width: calc(100% - 2.276rem);
+    height: 2.951rem;
+    float: right;
+    border-bottom: 0.036rem solid #e8e8e8;
+    overflow: hidden;
+}
+.loginTelInp{
+    width: 100% !important;
+    /*height: 1.067rem!important;
+    margin-top: 0.942rem;*/
+    padding-top: 1.475rem!important;
+    padding-bottom: 1.474rem!important;
+    font-size: 1.067rem;
+    line-height: 1.067rem!important;
+    border: none!important;
+    background: none!important;
+}
+.loginTelInp::-webkit-input-placeholder,.loginCodeInp::-webkit-input-placeholder,.loginPasswordInp::-webkit-input-placeholder{
+    font-family: SourceHanSansCN-Regular;
+    font-size: 1.067rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 1.567rem;
+    letter-spacing: 0.071rem;
+    color: #cccccc;
+}
+.loginTelInp:focus,.loginCodeInp:focus,.loginPasswordInp:focus{
+    outline: none;
+}
+.loginCodeInput button{
+    float: right!important;
+    display: block!important;
+    width: 5.2rem!important;
+    line-height: 2.951rem!important;
+    font-family: SourceHanSansCN-Regular!important;
+    font-size: 0.996rem!important;
+    font-weight: normal!important;
+    font-stretch: normal!important;
+    letter-spacing: 0.036rem!important;
+    color: #999999!important;
+}
+.loginCodeInput button.active{
+    color: #ee554d!important;
+}
+.loginCodeInp{
+    width: calc(100% - 6.765rem) !important;
+    /*height: 1.067rem!important;
+    margin-top: 0.942rem;*/
+    padding-top: 1.475rem!important;
+    padding-bottom: 1.474rem!important;
+    font-size: 1.067rem;
+    line-height: 1.067rem!important;
+    border: none!important;
+    background: none!important;
+}
+.loginNoseeBox{
+    width: 1.067rem;
+    height: 1.067rem;
+    float: right;
+    margin-top: 0.942rem;
+}
+.loginPasswordBox img.login_nosee,.loginPasswordBox img.login_cansee{
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+}
+.loginPasswordBox img.login_cansee{
+    display: none;
+}
+.loginPasswordInp{
+    width: calc(100% - 2.632rem)!important;
+    /*height: 1.067rem!important;
+    margin-top: 0.942rem;*/
+    padding-top: 1.475rem!important;
+    padding-bottom: 1.474rem!important;
+    font-size: 1.067rem;
+    line-height: 1.067rem!important;
+    border: none!important;
+    background: none!important;
+}
+.loginBtn{
+    width: 23.826rem!important;
+    height: 2.845rem!important;
+    margin: 0 auto!important;
+    background-color: #dddddd!important;
+    border-radius: 0.356rem!important;
+    display: block!important;
+    text-align: center!important;
+    margin-top: 2.2rem!important;
+    font-family: SourceHanSansCN-Regular!important;
+    font-size: 1.138rem!important;
+    font-weight: normal!important;
+    font-stretch: normal!important;
+    line-height: 2.845rem!important;
+    letter-spacing: 0.9rem!important;
+    color: #ffffff!important;
+}
+.loginBtn.active{
+    background-color: #ee554d!important;
+}

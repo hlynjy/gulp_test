@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <!--微信，qq，uc浏览器使用全屏模式，全屏模式里，浏览器是不会上下左右滑动出现背景的。-->
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <!--微信，qq，uc浏览器使用全屏模式，全屏模式里，浏览器是不会上下左右滑动出现背景的。-->
+    <title>商品详情</title>
+    <link rel="stylesheet" href="mui-master/dist/css/mui.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/details.css">
+</head>
+<body class="mui-ios mui-ios-11 mui-ios-11-0" style="background: #f4f4f4;">
+    <header class="mui-bar mui-bar-nav" id="details-header">
+        <div class="backBtnBox">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left backBtn"></a>
+        </div>
+        <h1 class="mui-title details-title">商品详情</h1>
+    </header>
+    <div class="details-scroll">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="goodInfoBox">
+            <div class="goodInfoBox-in">
+                <p class="goodPrice">￥<span></span></p>
+                <p class="goodDescribe"></p>
+                <div class="goodDetailed">
+                    <p class="goodPostage">快递：<span></span></p>
+                    <p class="goodSales"></p>
+                    <p class="goodAddress"></p>
+                </div>
+            </div>
+        </div>
+        <div class="goodAttributeBox">
+            <div class="goodAttributeBox-in">
+                <p class="goodChooseLeft">选择</p>
+                <div class="goodChooseCenterBig">
+                    <p class="goodChooseCenter">请选择商品属性</p>
+                    <div class="goodChooseRight">
+                        <img src="images/details_go.png" alt="">
+                    </div>
+                </div>
+                <p class="goodChooseSure" style="display: none;"></p>
+            </div>
+        </div>
+        <div class="goodEvaluateBox">
+            <div class="goodEvaluateBox-in">
+                <div class="goodEvaluateTitleBox">
+                    <div class="goodEvaluateIcon"></div>
+                    <p class="goodEvaluateTitle">商品评价(<span>0</span>)</p>
+                    <div class="goodEvaluateAll">
+                        <span class="goodEvaluateAllTil">查看全部</span>
+                        <span class="goodEvaluateAllGo"><img src="images/details_go.png" alt=""></span>
+                    </div>
+                </div>
+                <div class="goodEvaluateContentBox">
+                    <p class="goodEvaluateNone">暂无评价</p>
+                    <div class="goodEvaluateEveryBig">
+                        <!--<div class="goodEvaluateEvery">
+                            <div class="evaluateEveryImgBox">
+                                <img src="" alt="">
+                            </div>
+                            <div class="goodEvaluateContent">
+                                <p class="goodEvaluateContentTitle"></p>
+                                <p class="goodEvaluateContentDetailed"></p>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="goodDetailsBox">
+            <p class="goodDetailsTitle">
+                <span>——</span> 商品详情 <span>——</span>
+            </p>
+            <div class="goodDetailsImgBig">
+                <div class="goodDetailsImg">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="goodFootBox">
+        <a id="goBuy" href="javascript:;">立即购买</a>
+    </footer>
+    <div class="maskBox">
+        <div class="maskWrap">
+            <div class="maskWrap-in">
+                <div class="maskTopBox">
+                    <div class="maskTopImgBoxBig">
+                        <div class="maskTopImgBox">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div class="maskTopInfoBox">
+                        <p>
+                            <span class="maskTopPrice">￥ <span></span></span>
+                            <span class="maskTopStock">库存<span></span></span>
+                        </p>
+                        <p class="maskTopAttribute">请选择商品属性</p>
+                    </div>
+                    <!--<a class="maskTopClose" href="javascript:;">X</a>-->
+                    <img class="maskTopClose" src="images/detaild_close.png" alt="">
+                </div>
+                <div class="maskScrollBox">
+                    <div class="maskScrollTypeBig">
+                        <!--<div class="maskScrollType">
+                        <p class="maskScrollTitle"></p>
+                        <a class="maskScrollDetailed" href="javascript:;"></a>
+                    </div>-->
+                    </div>
+                    <div class="maskScrollMountBox">
+                        <p class="maskScrollMount">数量</p>
+                        <div class="maskScrollBtn">
+                            <a class="maskScrollReduce" href="javascript:;">-</a>
+                            <input type="text" class="maskScrollInp" value="1" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+                            <a class="maskScrollMore" href="javascript:;">+</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="maskFootBox">
+                    <a href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/mui.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jsencrypt.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/jQuery.md5.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/set-rootElem-rem.js"></script>
+    <script src="js/details.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            if (isWeixin()) {
+                $("#details-header").hide();
+            } else {
+                $("#details-header").show();
+            }
+            $(window).scroll(function() {
+                var top = $(".details-scroll").offset().top; //获取指定位置
+                var scrollTop = $(window).scrollTop();  //获取当前滑动位置
+                if(scrollTop > top){                 //滑动到该位置时执行代码
+                    $(".mui-bar-nav").addClass("active");
+                    $(".details-title").addClass("active");
+                    $(".backBtnBox").addClass("active");
+                    $(".backBtn").addClass("active");
+                }else{
+                    $(".mui-bar-nav").removeClass("active");
+                    $(".details-title").removeClass("active");
+                    $(".backBtnBox").removeClass("active");
+                    $(".backBtn").removeClass("active");
+                }
+            });
+        });
+        //判断是否在微信中打开
+        function isWeixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

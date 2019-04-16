@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="ui-page-login">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <!--微信，qq，uc浏览器使用全屏模式，全屏模式里，浏览器是不会上下左右滑动出现背景的。-->
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <!--微信，qq，uc浏览器使用全屏模式，全屏模式里，浏览器是不会上下左右滑动出现背景的。-->
+    <title>登录页面</title>
+    <link rel="stylesheet" href="mui-master/dist/css/mui.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="ui-page-login" style="background: #f4f4f4;">
+    <div class="loginWrap">
+        <div class="loginImgBox">
+            <img src="images/login_bg.png" alt="">
+        </div>
+        <div class="loginContentBox">
+            <div class="loginTopBox">
+                <div class="loginFirstBox active">
+                    <div class="loginPhone loginChangeDiv">手机快捷登录</div>
+                </div>
+                <div class="loginSecondBox">
+                    <div class="loginAccount loginChangeDiv">账号密码登录</div>
+                </div>
+            </div>
+            <div class="loginAllBox">
+                <div class="loginTelInfoBox">
+                    <div class="loginPhoneBox">
+                        <img src="images/login_tel.png" alt="">
+                        <div class="loginTelInput">
+                            <input id="firstTel" class="loginTelInp" oninput="if(value.length>5)value=value.slice(0,11)" type="number" placeholder="请输入11位手机号">
+                        </div>
+                    </div>
+                    <div class="loginCodeBox">
+                        <img src="images/login_code.png" alt="">
+                        <div class="loginCodeInput">
+                            <input class="loginCodeInp" maxlength="6" type="text" placeholder="请输入验证码">
+                            <button id="codeBtn" disabled="disabled">发送验证码</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="loginAccountBox" style="display: none;">
+                    <div class="loginPhoneBox">
+                        <img src="images/login_tel.png" alt="">
+                        <div class="loginTelInput">
+                            <input id="secondTel" class="loginTelInp" oninput="if(value.length>5)value=value.slice(0,11)" type="number" placeholder="请输入11位手机号">
+                        </div>
+                    </div>
+                    <div class="loginPasswordBox">
+                        <img src="images/login_password.png" alt="">
+                        <div class="loginPasswordInput">
+                            <input class="loginPasswordInp" type="password" placeholder="请输入密码">
+                            <div class="loginNoseeBox">
+                                <img class="login_nosee" src="images/login_nosee.png" alt="">
+                                <img class="login_cansee" src="images/login_cansee.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="loginBtn" href="javascript:;" disabled="disabled">登录</button>
+    </div>
+
+    <script src="js/mui.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jsencrypt.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/jQuery.md5.js"></script>
+    <script src="js/set-rootElem-rem.js"></script>
+    <script src="js/login.js"></script>
+    <script language="javascript" type="text/javascript">
+        //转换编码
+        var encrypt=new JSEncrypt();
+        encrypt.setPublicKey("-----BEGIN PUBLIC KEY-----\n" +
+            "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuZkcTIodJdEWyn+fCAAO\n" +
+        "rj2MRlj+cfUrH+enpwCsdj3lbE/DaId5q5blmr/AxeZtQ/IKNjJgpc7gghXFj/x7\n" +
+        "OxpowsnbpbElVhlu4Y0X/VVSY2uCNePYcljMKGfRYwKy2Ui08StUUYqGyLD4OMw3\n" +
+        "Ngec8SKlbQ5bcLm1gyOfa0QjQP5TCvxYM00Tgrus+f9jnKHooWGPOaZ7py6iC0R/\n" +
+        "OiyKC2DheFjqWGmBIG8FeGowo3goKoiG6Uwx2PGR5OK36AddNucydXayefYgSyVx\n" +
+        "pbo6UqxwTR5SFzy3aTCRPJlhYKO/VDfALXrTmRYWy1vRLpRcsoPPkM0aWGm6DSve\n" +
+        "nwIDAQAB\n" +
+        "-----END PUBLIC KEY-----");
+        if(isWeixin()){
+            window.onload = getcode;
+        }
+        //获取微信code
+        function getcode(){
+            var codes = getUrlParamsObj(window.location.href).code;
+            var urls;
+            if(!codes){
+                urls = encodeURIComponent("http://h5.shougongker.com/login.html");
+                if(urls){
+                    window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxaaeb0d990fb1414c&redirect_uri="+urls+"&response_type=code&scope=snsapi_base&state=wx#wechat_redirect";
+                }
+            }else{
+                var openID = $.cookie("openid");
+                if(!openID){
+                    $.ajax({
+                        url: "https://ms.shougongker.com/index.php?c=Loginnew&a=getOpenId&accessId=H1707137&time_stamp="+timest()+"&signature="+$.md5("accessId=H1707137&c="+getUrlParamsObj("https://ms.shougongker.com/index.php?c=Loginnew&a=getOpenId").c+"&a="+getUrlParamsObj("https://ms.shougongker.com/index.php?c=Loginnew&a=getOpenId").a+"&time_stamp="+timest()+"&secret=3b0ee641beeb0c249a7a8f52682d0544"),
+                        type: "post",
+                        data: {
+                            codes: codes,
+                            source: "h5"
+                        },
+                        dataType: 'json',
+                        success: function (result) {
+                            $.cookie("openid", result.data);
+                        },
+                        error: function (data) {
+
+                        }
+                    });
+                }
+            }
+        }
+
+        /**
+         * 将url中参数（或公共参数）转换为json对象
+         * @param href 当前页面url
+         * @returns all url上所有参数
+         */
+        function getUrlParamsObj(href) {
+            if (href.indexOf("?") == -1) {
+                return {};
+            }
+            href = decodeURIComponent(href);
+            var queryString = href.substring(href.indexOf("?") + 1);
+            var parameters = queryString.split("&");
+            var all = {};
+            var pos, paraName, paraValue;
+            for (var i = 0; i < parameters.length; i++) {
+                pos = parameters[i].indexOf('=');
+                if (pos == -1) {
+                    continue;
+                }
+                paraName = parameters[i].substring(0, pos);
+                paraValue = parameters[i].substring(pos + 1);
+                all[paraName] = paraValue;
+            }
+            return all;
+        }
+
+        //从1970年开始的毫秒数然后截取10位变成 从1970年开始的秒数
+        function timest() {
+            var tmp = Date.parse( new Date() ).toString();
+            tmp = tmp.substr(0,10);
+            return tmp;
+        }
+
+        //判断是否在微信中打开
+        function isWeixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

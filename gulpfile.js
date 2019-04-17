@@ -19,7 +19,7 @@ gulp.task('auto',function(){
     gulp.watch('images/*.*', ['images'])
 });
 gulp.task('css', function() {
-    return gulp.src('css/*.css')      //压缩的文件
+    return gulp.src(['css/*.css','!css/*.min.css'])      //压缩的文件
         /*.pipe(minifycss()); */  //执行压缩
         .pipe(cleanCSS({compatibility: 'ie7'}))
         .pipe(gulp.dest('dist/css'))   //输出文件夹

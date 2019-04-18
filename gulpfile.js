@@ -21,31 +21,31 @@ gulp.task('auto',function(){
     gulp.watch('css/*.css', ['css']);
     gulp.watch('images/*.*', ['images'])
 });
-/*gulp.task('css', function() {
-    return gulp.src(['css/!*.css','!css/!*.min.css'])      //压缩的文件
+gulp.task('css', function() {
+    return gulp.src(['css/*.css','!css/!*.min.css'])      //压缩的文件
         .pipe(minifycss())   //执行压缩
-        /!*.pipe(cleanCSS({compatibility: 'ie7'}))*!/
+        //.pipe(cleanCSS({compatibility: 'ie7'}))
         .pipe(gulp.dest('dist/css'))   //输出文件夹
-});*/
-gulp.task('concat',function () {
-    return gulp.src(['css/*.css','!css/*.min.css'])
+});
+/*gulp.task('concat',function () {
+    return gulp.src(['css/!*.css','!css/!*.min.css'])
         .pipe(concat('wap.min.css')) //- 合并后的文件名
-        .pipe(minifyCss()) //- 压缩处理成一行
+        .pipe(minifycss()) //- 压缩处理成一行
         .pipe(rev()) //- 文件名加MD5后缀
         .pipe(gulp.dest('./css')) //- 输出文件本地
         .pipe(rev.manifest()) //- 生成一个rev-manifest.json
         .pipe(gulp.dest('./rev')); //- 将 rev-manifest.json 保存到 rev 目录内});
-});
-gulp.task('rev',function () {
-    return gulp.src(['./rev/*.json', './application/**/header.php']) //- 读取 rev-manifest.json 文件以及需要进行css名替换的文件
+});*/
+/*gulp.task('rev',function () {
+    return gulp.src(['./rev/!*.json', './application/!**!/header.php']) //- 读取 rev-manifest.json 文件以及需要进行css名替换的文件
         .pipe(revCollector()) //- 执行文件内css名的替换
         .pipe(gulp.dest('./application/')); //- 替换后的文件输出的目录});
-});
+});*/
 gulp.task('images', function() {
     return gulp.src('images/*.*')      //压缩的文件
         .pipe(imagemin())  //执行压缩
         .pipe(gulp.dest('dist/images'))   //输出文件夹
 });
-gulp.task('default',['script','auto','images','concat', 'rev'],function () {
+gulp.task('default',['script','auto','css','images'],function () {
     console.log("default");
 });

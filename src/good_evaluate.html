@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <!--微信，qq，uc浏览器使用全屏模式，全屏模式里，浏览器是不会上下左右滑动出现背景的。-->
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <!--微信，qq，uc浏览器使用全屏模式，全屏模式里，浏览器是不会上下左右滑动出现背景的。-->
+    <title>全部评价</title>
+    <link rel="stylesheet" href="lib/css/mui.css">
+    <link rel="stylesheet" href="css/details.css">
+</head>
+<body class="mui-ios mui-ios-11 mui-ios-11-0" style="background: #fff;">
+    <header class="mui-bar mui-bar-nav evaluaterHead">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title orderTitle">全部评价</h1>
+    </header>
+    <div class="evaluateContent">
+        <div class="evaluateEveryBox">
+            <div class="evaluateEveryBox-in">
+                <!--<div class="evaluateEveryTop">
+                    <div class="evaluateEveryImgBox">
+                        <img src="" alt="">
+                    </div>
+                    <p class="evaluateEveryName">娟子爱手工</p>
+                    <p class="evaluateEveryDate">2019-03-29</p>
+                </div>
+                <p class="evaluateEvery">挺厚的，也够大了。质量不错。</p>
+                <p class="evaluateEveryKind">A3(450*300*3)</p>-->
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/js/mui.min.js"></script>
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/jsencrypt.min.js"></script>
+    <script src="lib/js/jQuery.md5.js"></script>
+    <script src="lib/js/set-rootElem-rem.js"></script>
+    <script src="js/good_evaluate.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            if (isWeixin()) {
+                $(".evaluaterHead").hide();
+                $(".evaluateContent").css("margin-top","0");
+            } else {
+                $(".evaluaterHead").show();
+                $(".evaluateContent").css("margin-top","3.129rem");
+            }
+        });
+        //判断是否在微信中打开
+        function isWeixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <!--微信，qq，uc浏览器使用全屏模式，全屏模式里，浏览器是不会上下左右滑动出现背景的。-->
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <!--微信，qq，uc浏览器使用全屏模式，全屏模式里，浏览器是不会上下左右滑动出现背景的。-->
+    <title>地址管理</title>
+    <link rel="stylesheet" href="lib/css/mui.css">
+    <link rel="stylesheet" href="css/details.css">
+</head>
+<body class="mui-ios mui-ios-11 mui-ios-11-0" style="background: #fff;">
+    <header class="mui-bar mui-bar-nav orderHead">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <a id="adminAddIcon" class="mui-pull-right" style="font-size: 2.289rem!important;color: #000!important;">+</a>
+        <h1 class="mui-title orderTitle">地址管理</h1>
+    </header>
+    <div class="adminAddBox">
+        <p class="adminAddNone">您还没有地址,赶快去添加</p>
+        <div class="adminAddEveryBig">
+            <div class="adminAddEvery">
+                <!--<div class="adminAddEvery-in">
+                    <div class="adminAddNameBox">
+                        <div class="adminAddDefaultIcon"></div>
+                        <p class="adminAddBuyer">买家姓名：<span>侯琳</span></span></p>
+                        <div class="adminAddEditBox">
+                            <p class="adminAddEdit">编辑</p>
+                            <p class="adminAddRemove">删除</p>
+                        </div>
+                    </div>
+                    <p class="adminAddTel">手机号码：<span>13146525169</span></span></p>
+                    <p class="adminAddress">收货地址：<span>北京市昌平区天通苑</span></span></p>
+                </div>-->
+            </div>
+        </div>
+        <button class="adminAddBtn">新建地址</button>
+        <!--<div class="adminAddEvery">
+            <div class="adminAddEvery-in">
+                <div class="adminAddNameBox">
+                    <div class="adminAddDefaultIcon"></div>
+                    <p class="adminAddBuyer">买家姓名：<span>侯琳</span></span></p>
+                    <div class="adminAddEditBox">
+                        <p class="adminAddEdit">编辑</p>
+                        <p class="adminAddRemove">删除</p>
+                    </div>
+                </div>
+                <p class="adminAddTel">手机号码：<span>13146525169</span></span></p>
+                <p class="adminAddress">收货地址：<span>北京市昌平区天通苑</span></span></p>
+            </div>
+        </div>
+        <div class="adminAddEvery">
+            <div class="adminAddEvery-in">
+                <div class="adminAddNameBox">
+                    <div class="adminAddDefaultIcon"></div>
+                    <p class="adminAddBuyer">买家姓名：<span>侯琳</span></span></p>
+                    <div class="adminAddEditBox">
+                        <p class="adminAddEdit">编辑</p>
+                        <p class="adminAddRemove">删除</p>
+                    </div>
+                </div>
+                <p class="adminAddTel">手机号码：<span>13146525169</span></span></p>
+                <p class="adminAddress">收货地址：<span>北京市昌平区天通苑</span></span></p>
+            </div>
+        </div>
+        <div class="adminAddEvery">
+            <div class="adminAddEvery-in">
+                <div class="adminAddNameBox">
+                    <div class="adminAddDefaultIcon"></div>
+                    <p class="adminAddBuyer">买家姓名：<span>侯琳</span></span></p>
+                    <div class="adminAddEditBox">
+                        <p class="adminAddEdit">编辑</p>
+                        <p class="adminAddRemove">删除</p>
+                    </div>
+                </div>
+                <p class="adminAddTel">手机号码：<span>13146525169</span></span></p>
+                <p class="adminAddress">收货地址：<span>北京市昌平区天通苑</span></span></p>
+            </div>
+        </div>
+        <div class="adminAddEvery">
+            <div class="adminAddEvery-in">
+                <div class="adminAddNameBox">
+                    <div class="adminAddDefaultIcon"></div>
+                    <p class="adminAddBuyer">买家姓名：<span>侯琳</span></span></p>
+                    <div class="adminAddEditBox">
+                        <p class="adminAddEdit">编辑</p>
+                        <p class="adminAddRemove">删除</p>
+                    </div>
+                </div>
+                <p class="adminAddTel">手机号码：<span>13146525169</span></span></p>
+                <p class="adminAddress">收货地址：<span>北京市昌平区天通苑</span></span></p>
+            </div>
+        </div>-->
+    </div>
+    <div class="adminMaskBox">
+        <div class="adminMaskContent">
+            <p class="adminMaskTitle">确定要删除该收货地址吗？</p>
+            <div class="adminMaskBtnBox">
+                <div class="adminCancelBtn">取消</div>
+                <div class="adminSureBtn">确定</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/js/mui.min.js"></script>
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/jsencrypt.min.js"></script>
+    <script src="lib/js/jquery.cookie.js"></script>
+    <script src="lib/js/jQuery.md5.js"></script>
+    <script src="lib/js/set-rootElem-rem.js"></script>
+    <script src="js/addressAdmin.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            if (isWeixin()) {
+                $(".orderHead").hide();
+                $(".adminAddBtn").show();
+                $(".adminAddBox").css("margin-top","0");
+            } else {
+                $(".orderHead").show();
+                $(".adminAddBtn").hide();
+                $(".adminAddBox").css("margin-top","3.129rem");
+            }
+        });
+        //判断是否在微信中打开
+        function isWeixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <!--微信，qq，uc浏览器使用全屏模式，全屏模式里，浏览器是不会上下左右滑动出现背景的。-->
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <!--微信，qq，uc浏览器使用全屏模式，全屏模式里，浏览器是不会上下左右滑动出现背景的。-->
+    <title>编辑地址</title>
+    <link rel="stylesheet" href="lib/css/mui.css">
+    <link rel="stylesheet" href="css/details.css">
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav orderHead">
+        <!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+        <a id="editAddPreservation" class="mui-pull-right" style="font-size: 0.996rem!important;color: #000!important;">保存</a>
+        <h1 class="mui-title orderTitle">编辑地址</h1>
+    </header>
+    <div class="editAddBox">
+        <div class="editAddBuyerBox">
+            <div class="editAddBuyerBox-in">
+                <p class="editAddBuyerName">买家姓名</p>
+                <div class="editAddNameBox">
+                    <input id="editConsignee" type="text" placeholder="请输入姓名">
+                </div>
+            </div>
+        </div>
+        <div class="editAddBuyerBox">
+            <div class="editAddBuyerBox-in">
+                <p class="editAddBuyerName">手机号码</p>
+                <div class="editAddNameBox">
+                    <input id="editPhone" type="text" placeholder="请输入手机号码">
+                </div>
+            </div>
+        </div>
+        <div class="editAddBuyerBox" id="editAddArea">
+            <div class="editAddBuyerBox-in">
+                <p class="editAddBuyerName">所在地区</p>
+                <div class="editAddNameBox">
+                    <div class="editAddChooseBox">
+                        <span class="editAddAreaBox">请选择</span>
+                        <span class="editAddImg"><img src="images/details_go.png" alt=""></span>
+                    </div>
+                    <span class="editAddArea"></span>
+                </div>
+            </div>
+        </div>
+        <div class="editAddBuyerBox">
+            <div class="editAddBuyerBox-in">
+                <p class="editAddBuyerName" style="width: 6.401rem;">填写详细地址</p>
+                <div class="editAddNameBox" style="width: calc(100% - 7.401rem);">
+                    <input id="editAddress" type="text" placeholder="请填写详细地址">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="editButtonBox">
+        <div class="editAddDefaultBox">
+            <div class="editAddDefaultIcon"></div>
+            <p class="editAddDefault">设为默认地址</p>
+        </div>
+        <button class="editPreBtn">保存</button>
+    </div>
+
+    <script src="lib/js/mui.min.js"></script>
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/jsencrypt.min.js"></script>
+    <script src="lib/js/jquery.cookie.js"></script>
+    <script src="lib/js/jQuery.md5.js"></script>
+    <script src="lib/js/set-rootElem-rem.js"></script>
+    <script src="js/editAddress.js"></script>
+    <!--<script src="js/addressArea.js"></script>-->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            if (isWeixin()) {
+                $(".orderHead").hide();
+                $(".editPreBtn").show();
+                $(".editAddBox").css("margin-top","0");
+            } else {
+                $(".orderHead").show();
+                $(".editPreBtn").hide();
+                $(".editAddBox").css("margin-top","3.129rem");
+            }
+        });
+        //判断是否在微信中打开
+        function isWeixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

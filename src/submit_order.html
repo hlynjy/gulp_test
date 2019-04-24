@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <!--微信，qq，uc浏览器使用全屏模式，全屏模式里，浏览器是不会上下左右滑动出现背景的。-->
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <!--微信，qq，uc浏览器使用全屏模式，全屏模式里，浏览器是不会上下左右滑动出现背景的。-->
+    <title>提交订单</title>
+    <link rel="stylesheet" href="lib/css/mui.css">
+    <link rel="stylesheet" href="css/details.css">
+</head>
+<body class="mui-ios mui-ios-11 mui-ios-11-0" style="background: #f4f4f4;">
+    <header class="mui-bar mui-bar-nav orderHead">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title orderTitle">提交订单</h1>
+    </header>
+    <div class="orderAddressBox">
+        <div class="orderAddressBox-in">
+            <div class="orderAddNoneBox">
+                <p class="orderAddPlus">+</p>
+                <p class="orderAddress">添加收货地址</p>
+            </div>
+            <!--<div class="orderAddTop">
+                <div class="orderAddConsignee">
+                    <p>收货人：</p>
+                    <input class="orderAddName" type="text">
+                </div>
+                <div class="orderAddTel">
+                    <p>手机号：</p>
+                    <input class="orderAddNum" type="text">
+                </div>
+            </div>
+            <div class="orderAddBottom">
+                <p>地址：</p>
+                <textarea name="" rows="2" class="orderAddDetailed"></textarea>
+                &lt;!&ndash;<input class="orderAddDetailed" type="text">&ndash;&gt;
+            </div>-->
+            <div class="orderAddContentBoxBig" style="display: none;">
+                <div class="orderAddContentBox">
+                    <!--<div class="orderAddIcon"></div>
+                    <div class="orderAddContent">
+                        <div class="orderAddTop">
+                            <p class="orderAddConsignee">收货人：<span>侯琳</span></span></p>
+                            <p class="orderAddTel">13112301230</p>
+                        </div>
+                        <p class="orderAddDetailed">北京市昌平区天通苑矩阵小区29号楼5单元616室</p>
+                    </div>
+                    <p class="orderAddGo">></p>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="orderGoodBox">
+        <div class="orderGoodBig-in">
+            <div class="orderGoodSmall-in">
+                <div class="orderGoodSmallBox">
+                    <div class="orderGoodImgBox">
+                        <img src="" alt="">
+                    </div>
+                    <div class="orderGoodInfoBox">
+                        <p class="orderGoodTitle"></p>
+                        <p class="orderGoodKind"></p>
+                        <div class="orderGoodPriceBox">
+                            <p class="orderGoodPrice">￥<span></span></span></p>
+                            <p class="orderGoodMount">x <span></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="orderGoodSideBox">
+                <div class="orderGoodDelBox">
+                    <span class="orderGoodDel">配送方式</span>
+                    <span class="orderGoodDelVal"></span>
+                </div>
+                <div class="orderGoodMesBox">
+                    <p class="orderGoodMes">给卖家留言</p>
+                    <div style="height: 2.60rem;width: calc(100% - 4.867rem) !important;float: right;overflow: hidden;">
+                        <textarea class="orderGoodMesVal" placeholder="选填：填写内容已和卖家协商确定"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="orderGoodTotalBox">
+            <div class="orderGoodTotalBox-in">
+                <p>
+                    <a href="javascript:;" class="orderGoodCount"><span></span>件商品</a>
+                    <a href="javascript:;" class="orderGoodTotal">小计：<span>￥</span><span class="orderGoodMoney"></span></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="orderBox">
+        <div class="orderBox-in">
+            <p class="orderPayBox">选择支付方式</p>
+            <div class="orderWeixinBox">
+                <div class="weixin_pay">
+                    <img src="images/weixin_pay.png" alt="">
+                </div>
+                <p>微信支付</p>
+                <div class="weixinChoose">
+                    <!--<input name="radio1" type="radio">-->
+                    <span class="weixinChooseSure active"></span>
+                </div>
+            </div>
+            <div class="orderzhifubaoBox">
+                <div class="zhifubao_pay">
+                    <img src="images/zhifubao_pay.png" alt="">
+                </div>
+                <p>支付宝支付</p>
+                <div class="weixinChoose">
+                    <!--<input name="radio1" type="radio">-->
+                    <span class="zhifubaoChooseSure"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="orderFootBox">
+        <p>
+            <a href="javascript:;" class="orderGoodAllTotal">合计：<span>￥</span><span class="orderGoodMoney"></span></a>
+            <a href="javascript:;" class="orderFootPay">去付款</a>
+        </p>
+    </div>
+
+    <script src="lib/js/mui.min.js"></script>
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/jsencrypt.min.js"></script>
+    <script src="lib/js/jquery.cookie.js"></script>
+    <script src="lib/js/jQuery.md5.js"></script>
+    <script src="lib/js/set-rootElem-rem.js"></script>
+    <script src="js/submitOrder.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            if (isWeixin()) {
+                $(".orderHead").hide();
+                $(".orderAddressBox").css("margin-top","0");
+            } else {
+                $(".orderHead").show();
+                $(".orderAddressBox").css("margin-top","3.129rem");
+            }
+        });
+        //判断是否在微信中打开
+        function isWeixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
